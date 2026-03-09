@@ -1,0 +1,324 @@
+/* ============================================================
+   Personal Academic Website — Ramaele Moshoeshoe
+   Style: Clean, minimal, academic
+   ============================================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:   #1a2e4a;
+  --blue:   #2563eb;
+  --light:  #f0f4f8;
+  --border: #d1d9e0;
+  --text:   #1f2937;
+  --muted:  #6b7280;
+  --white:  #ffffff;
+  --green:  #16a34a;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Georgia', serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--text);
+  background: var(--white);
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* --- Navigation --- */
+nav {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+nav .nav-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+nav .nav-brand {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul a {
+  color: rgba(255,255,255,0.85);
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+nav ul a:hover, nav ul a.active {
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 2px solid #60a5fa;
+  padding-bottom: 2px;
+}
+
+/* --- Page Layout --- */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* --- Hero / Profile Section --- */
+.hero {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  color: var(--navy);
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 0.3rem;
+}
+
+.hero-text .title {
+  font-size: 1rem;
+  color: var(--blue);
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.hero-text .affil {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-family: 'Arial', sans-serif;
+  color: var(--navy);
+  background: var(--light);
+  transition: all 0.2s;
+}
+
+.social-links a:hover {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+  text-decoration: none;
+}
+
+/* --- Section headings --- */
+h2.section-title {
+  font-size: 1.4rem;
+  color: var(--navy);
+  font-family: 'Arial', sans-serif;
+  border-left: 4px solid var(--blue);
+  padding-left: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+h3.sub-title {
+  font-size: 1.05rem;
+  color: var(--navy);
+  font-family: 'Arial', sans-serif;
+  margin: 2rem 0 1rem;
+}
+
+/* --- Bio / About text --- */
+.bio p {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+/* --- Research interests tags --- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.82rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* --- Publication cards --- */
+.pub-list { list-style: none; }
+
+.pub-item {
+  padding: 1.2rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: var(--white);
+  transition: box-shadow 0.2s;
+}
+
+.pub-item:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+
+.pub-item .pub-title {
+  font-weight: bold;
+  color: var(--navy);
+  font-size: 0.97rem;
+  margin-bottom: 0.3rem;
+}
+
+.pub-item .pub-journal {
+  font-style: italic;
+  color: var(--green);
+  font-size: 0.88rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.pub-item .pub-authors {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-family: 'Arial', sans-serif;
+  margin-top: 0.2rem;
+}
+
+.pub-item .pub-meta {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.badge-pub   { background: #dcfce7; color: #15803d; }
+.badge-wp    { background: #fef9c3; color: #854d0e; }
+.badge-forth { background: #ede9fe; color: #6d28d9; }
+.badge-book  { background: #fee2e2; color: #991b1b; }
+
+/* --- CV timeline --- */
+.cv-section { margin-bottom: 2.5rem; }
+
+.cv-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--light);
+}
+
+.cv-year {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding-top: 2px;
+}
+
+.cv-detail strong {
+  display: block;
+  color: var(--navy);
+  font-size: 0.95rem;
+}
+
+.cv-detail span {
+  color: var(--muted);
+  font-size: 0.87rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* --- Contact --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  padding: 1.2rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--light);
+}
+
+.contact-item .label {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.contact-item .value {
+  font-size: 0.95rem;
+  color: var(--navy);
+}
+
+/* --- Footer --- */
+footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.65);
+  text-align: center;
+  padding: 1.5rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.82rem;
+  margin-top: 4rem;
+}
+
+footer a { color: rgba(255,255,255,0.8); }
+
+/* --- Responsive --- */
+@media (max-width: 680px) {
+  .hero { flex-direction: column; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .cv-item { grid-template-columns: 1fr; gap: 0.2rem; }
+  nav .nav-brand { display: none; }
+  nav ul { gap: 1rem; }
+}
