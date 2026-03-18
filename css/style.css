@@ -243,6 +243,25 @@ h3.sub-title {
 .badge-forth { background: #ede9fe; color: #6d28d9; }
 .badge-book  { background: #fee2e2; color: #991b1b; }
 
+.pub-link {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  background: #e0f2fe;
+  color: #0369a1;
+  text-decoration: none;
+}
+.pub-link:hover { background: #0369a1; color: var(--white); text-decoration: none; }
+
+.pub-item .pub-title a {
+  color: var(--navy);
+  text-decoration: none;
+}
+.pub-item .pub-title a:hover { text-decoration: underline; color: var(--blue); }
+
 /* --- CV timeline --- */
 .cv-section { margin-bottom: 2.5rem; }
 
